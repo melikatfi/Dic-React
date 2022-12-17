@@ -1,13 +1,23 @@
 import React, {useState} from 'react'
 import './Search.css';
+import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.css';
+import Result from './Result';
 
 function App() {
   let [Word , SetWord] = useState("");
+  let [Res , SetRes] = useState([]);
+
+  function handleResponse(response){
+    SetRes(response.data)
+  }
 
   function Search(event){
       event.preventDefault();
       alert(`Search For ${Word}'s defenition`)
+
+      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${Word}`;
+      axios.get(apiUrl).then(handleResponse)
   }
 
   function HandleWord(event){
@@ -24,6 +34,7 @@ function App() {
           </div>
         </div>
       </form>
+      <Result results={Res} />
     </div>
   );
 }
