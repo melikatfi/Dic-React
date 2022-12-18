@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './Search.css';
+import './index.css';
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.css';
 import Result from './Result';

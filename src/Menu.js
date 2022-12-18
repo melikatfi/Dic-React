@@ -1,5 +1,5 @@
 import React from 'react'
-import './Menu.css';
+import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
