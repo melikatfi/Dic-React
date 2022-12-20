@@ -4,7 +4,6 @@ import Meaning from './Meaning'
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default function Result(props) {
-    console.log(props.results)
     if(props.results.length){
         return (
           <div className="App mx-auto mt-5">

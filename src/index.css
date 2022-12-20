@@ -30,9 +30,17 @@ code {
 }
 
 .btn { 
-	background: #ea8a8a !important; 
+	background: rgb(234, 138, 138) !important; 
 }
 
 .fourth-color { 
 	background: #685454; 
+}
+
+.form-control:focus {
+  color: #685454 !important;
+  background-color: #fff;
+  border-color: #ebd5d5 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(234 213 213 / 50%) !important;
 }
